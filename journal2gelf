@@ -78,7 +78,7 @@ class JournalToGelf:
         self.buf = deque()
         self.fp = fp
         self.multiline_format = multiline_format
-        self.gelf = graypy.GELFHandler(host, port)
+        self.gelf = graypy.GELFTCPHandler(host, port)
 
     def _send_gelf(self):
         try:
